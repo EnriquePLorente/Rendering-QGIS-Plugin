@@ -1,0 +1,12 @@
+[general]
+name= PluginCanvasComp
+qgisMinimumVersion=2.16
+qgisMaximumVersion=3.99
+description= Plugin Reendering	
+about= Plugin Base para el curso QGIS
+version=0.0
+author=Enrique Poveda Lorente
+email=enrique.povedalorente@gmail.com
+icon=images/icon.jpg
+experimental=False
+

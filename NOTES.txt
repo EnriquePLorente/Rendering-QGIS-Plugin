@@ -1,0 +1,2 @@
+Añade la preview
+Prueba varios proyectos y que funcione (Añade funcionalidad con Google Maps para que no lo tenga en cuenta en extensiión)
