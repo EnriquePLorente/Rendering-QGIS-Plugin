@@ -1,1 +1,2 @@
-![Description of the image](./git_images/LOCATIONMAP.PNG)
+![Description of the image](./git_images/LOCATIONMAP.png)
+
