@@ -187,24 +187,18 @@ class generateMapComposition():
         item.attemptMove(QgsLayoutPoint(160, 185, QgsUnitTypes.LayoutMillimeters))  
         layout.addLayoutItem(item)
         
+     # Hide all layers in the layer tree
+        for layer_node in layer_tree_root.children():
+                layer_node.setItemVisibilityChecked(False)  # Hide the layer in the layer tree
+        
+        # Create and export the layout
         layoutItem = layoutmanager.layoutByName(layoutname)
         export = QgsLayoutExporter(layoutItem)
         output_format = self.nameOutputFile.replace(" ","")
         export.exportToImage(self.outputPath + "/" + output_format + ".png", QgsLayoutExporter.ImageExportSettings())
         
-    
-        
-        for layer in layer_tree_root.children():
-            QgsProject.instance().removeMapLayer(layer.layerId())
-            
-                #Add one to one all the layers to the project
-        for filename in os.listdir(self.dataPath):
-            if filename.endswith(".shp"):  # Check for shapefiles
-
-                layer_path = os.path.join(self.dataPath, filename)
-                # Create a vector layer
-                vector_layer = QgsVectorLayer(layer_path, filename[:-4], "ogr")  # Remove .shp for the layer name
-                
-
-                QgsProject.instance().addMapLayer(vector_layer)
-                print(f"Layer {filename} added successfully.")
+        # Show all layers in the layersList
+        for layer in self.layersList:
+        # Get the layer's tree layer object
+            layer_tree = project.layerTreeRoot().findLayer(layer.id())
+            layer_tree.setItemVisibilityChecked(True)  # Set visibility to True (visible)
