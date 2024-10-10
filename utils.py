@@ -168,7 +168,7 @@ class generateMapComposition():
                 parent_group.removeChildNode(layer_tree_layer)
         
         legend = QgsLayoutItemLegend(layout)
-        legend.setLinkedMap(map) # map is an instance of QgsLayoutItemMap
+        legend.setLinkedMap(map) 
         legend.setTitle("Map Legend")  
         legend.attemptMove(QgsLayoutPoint(214.5, 84.5 + 5, QgsUnitTypes.LayoutMillimeters)) 
         layout.addLayoutItem(legend)
@@ -199,6 +199,5 @@ class generateMapComposition():
         
         # Show all layers in the layersList
         for layer in self.layersList:
-        # Get the layer's tree layer object
             layer_tree = project.layerTreeRoot().findLayer(layer.id())
-            layer_tree.setItemVisibilityChecked(True)  # Set visibility to True (visible)
+            layer_tree.setItemVisibilityChecked(True)  

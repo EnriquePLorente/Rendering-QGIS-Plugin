@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>593</width>
-    <height>439</height>
+    <height>410</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>400</y>
+     <x>390</x>
+     <y>370</y>
      <width>171</width>
      <height>32</height>
     </rect>
@@ -32,8 +32,8 @@
   <widget class="QPushButton" name="compositionButton">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>360</y>
+     <x>20</x>
+     <y>370</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -103,29 +103,6 @@
     <rect>
      <x>400</x>
      <y>320</y>
-     <width>161</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>360</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Data Input Folder</string>
-   </property>
-  </widget>
-  <widget class="QgsFileWidget" name="mQgsFileWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>350</y>
      <width>161</width>
      <height>27</height>
     </rect>
@@ -282,22 +259,6 @@
     <hint type="destinationlabel">
      <x>377</x>
      <y>309</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>mQgsFileWidget_2</sender>
-   <signal>fileChanged(QString)</signal>
-   <receiver>pathDialog</receiver>
-   <slot>updateDataPath()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>217</x>
-     <y>367</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>27</x>
-     <y>397</y>
     </hint>
    </hints>
   </connection>
